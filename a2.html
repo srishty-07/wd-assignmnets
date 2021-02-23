@@ -1,0 +1,82 @@
+<!-- form  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<style>
+    fieldset
+    {
+        padding:15px 7px;
+        margin:10px;
+    }
+    legend{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    input,label{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+</style>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>NAME</legend>
+            <label for="name">First Name
+                <input type="text" placeholder="eg: Srishty" required>
+            </label>
+            <label for="name">Last Name:
+                <input type="text" placeholder="eg: Bedi">
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Contact Details</legend>
+            <label for="Phone">Phone:
+                <input type="phone" placeholder="90XXXXXXXX" maxlength="10" required>
+            </label>
+
+            <label for="email">Email:
+                <input type="email" placeholder="someone@gmail.com" required>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Personal Details</legend>
+            Gender:
+            <label for="female">Female</label><input type="radio" name="gender"><label for="male">Male</label><input
+                type="radio" name="gender"><label for="Others">Others</label><input type="radio" name="gender"><br>
+
+
+        </fieldset>
+        <fieldset>
+            <legend>Educational</legend>
+            Feild of experty:
+            <select name="" id="" required>
+                <option>B-tech Computer Science</option>
+                <option>Bsc</option>
+                <option>MBA</option>
+                <option>BTech+MBA</option>
+                <option>Msc</option>
+            </select>
+
+            <label for="marksheet"> 10th certificate</label>
+            <input type="file" id="marksheet" required>
+            <!-- required is used to show that this feild is mandatory -->
+        </fieldset>
+        <fieldset>
+            <legend> Date&Time:</legend>
+            Date&Time:
+            <input type="datetime-local" placeholder="Select the date and time">
+        </fieldset>
+        Write to us:
+        <textarea cols="50" rows="10" placeholder="enter your message over here">Default Text</textarea>
+        <input type="submit">
+    </form>
+
+
+</body>
+
+</html>
