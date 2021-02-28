@@ -1,0 +1,75 @@
+
+.phonebar
+{
+    border: 2px solid rgb(156, 151, 151);
+    padding: 16px;
+    margin: 10px;
+    font-size: 24px;
+    /* margin-right: 12px; */
+    float: inline-end;
+    /* background-color: rgb(209, 237, 241); */
+}
+.phonebar input[type="text"]
+{
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;  
+  width: 40%;
+  background: #f1f1f1;
+}
+.phonebar button{
+  
+  width: 9%;
+  padding: 10px;
+  background: #feffff;
+  color: rgb(5, 5, 5);
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+.phonebar button:hover{
+    background-color: rgb(173, 173, 230);
+}
+
+.a-letter
+{
+    border: 2px solid black;
+    margin: 12px;
+    padding: 9px;
+}
+
+.a-div
+{
+    border-bottom: 2px solid black;
+    margin:12px;
+    padding: 10px;
+    position: sticky;
+    top: 10px;
+    text-align: center;
+}
+
+ul {
+    list-style: none; /* Remove default bullets */
+    
+  }
+
+ul li::before {
+    content: "\260E";  /* Add content: \260E  unicode for a phone */
+    padding:10px;     
+}
+ul li:hover{
+    text-decoration:4px solid rebeccapurple underline;
+}
+.a-div:nth-child(odd) {
+    background: rgb(125, 229, 236);
+  }
+ 
+
+.a-letter:nth-child(even) {
+    background: rgb(173, 173, 230);
+  } 
+
+  .a-letter:nth-child(odd) {
+    background: rgb(200, 200, 207);
+  } 
