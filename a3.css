@@ -5,9 +5,7 @@
     padding: 16px;
     margin: 10px;
     font-size: 24px;
-    /* margin-right: 12px; */
-    float: inline-end;
-    /* background-color: rgb(209, 237, 241); */
+    
 }
 .phonebar input[type="text"]
 {
