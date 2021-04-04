@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: url('https://i.gifer.com/7RtV.gif');
+    
+    background-size: cover;
+    background-position:top center ;    
+}
+
+.app-wrap{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-content: center;
+    margin: 50px auto;
+    min-height: 90vh;
+    width: 40vw;
+    border-radius: 14px;
+    border: 1px solid;
+    border-image-source: linear-gradient( rgb(163, 160, 160), rgb(117, 117, 116));
+    border-image-slice: 0.5;    
+    backdrop-filter: blur(20px);
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 15px 15px;
+}
+header input{
+    border-radius: 12px;
+    width: 100%;
+    max-width: 280px;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-weight: 0.2s ease-out;
+}
+main{
+    padding: 25px 25px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.city{
+      font-size: 44px;
+      font-weight: bolder;
+      /* color: #caf0f8; */
+
+}
+.date{
+    font-size: 17px;
+    /* font-weight: bolder; */
+    /* color: #caf0f8; */
+    padding-bottom: 12px;
+}
+.temp{
+    font-size: 64px;
+    /* color: #caf0f8; */
+    padding-bottom: 12px;
+}
+.weather{
+    font-size: 17px;
+    /* color: #caf0f8; */
+    padding-bottom: 12px;
+
+}
+.visibility{
+    font-size: 17px;
+    /* color: #caf0f8; */
+    padding-bottom: 12px;
+
+}
