@@ -1,0 +1,97 @@
+<%- include("../partial/header.ejs") %>
+  <%- include("../partial/navbar.ejs") %>
+    <div class="container" style="margin-top: 17px;">
+
+      <%- include("../partial/flash.ejs")%>
+    
+      <div class="row">
+      
+        <div class="col-lg-6">
+          <div class="card" style="width: 30rem;">
+           
+            <div class="card-body" style="text-align: center;">
+              
+              <h5 class="card-title">
+                <%=product.name%>
+              </h5>
+              <p class="card-text" style="font-style: italic;">
+                - <%=product.author%>
+              </p>
+              <img src="<%=product.img%>" style="margin-bottom:12px" class="card-img-top" alt="...">
+              <p class="card-text">
+                <%=product.desc%>
+              </p>
+              <h5 class="card-title">
+                <%=product.date%>
+              </h5>
+              <a href="#" class="btn btn-primary">Buy</a>
+              <a href="#" class="btn btn-primary">Add to cart</a>
+              <a href="/products/<%=product._id%>/edit" class="btn btn-primary">Edit</a>
+              <div class="mt-1">
+                <form action="/products/<%=product._id%>?_method=DELETE" method="POST">
+                  <button class="btn btn-danger">delete</button>
+                </form>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <h1>leave a review</h1>
+          
+
+            <form class="needs-validation" action="/products/<%=product._id%>/review" method="POST" class="row g-3"
+              style="max-width:70%;margin-top: 17px;" novalidate>
+              <div class="mb-3">
+                 <label for="rating" class="form-label">Rating</label>
+                 <input type="range" class="form-range" min="0" max="5" name="rating" id="rating">
+              </div>
+
+
+
+              <div class="mb-3">
+                <label for="desc" class="form-label">Enter your Review</label>
+                <textarea class="form-control" id="desc" rows="3" name="comment" required></textarea>
+                
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+
+                <div class="invalid-feedback">
+                  Please enter a valid description.
+                </div>
+              
+              </div>
+              
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            
+            </form>
+            <div class="mb-3 mt-3">
+              <%for(let review of product.reviews){%>
+                <div class="card mb-3">
+                  <div class="card-header">
+                    User
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Rating: <%=review.rating%></h5>
+                    <p class="card-text"> <%=review.comment%></p>
+                    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                  </div>
+                </div> 
+             <% }%>
+         </div>
+        </div>
+
+        
+
+      </div>
+
+
+    </div>
+    </div>
+
+
+    <%- include("../partial/footer.ejs") %>
