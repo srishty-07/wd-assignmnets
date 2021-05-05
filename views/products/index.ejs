@@ -1,0 +1,39 @@
+<%- include("../partial/header.ejs") %>
+  <%- include("../partial/navbar.ejs") %>
+    <main class="container">
+
+      <!-- displaying the flash message in the main index pagee -->
+      <%- include("../partial/flash.ejs")%>
+
+        <section>
+          <h4 class="display-3"><i class="fas fa-shopping-cart"> My blogs</i> </h4>
+        </section>
+
+        <div class="row" style="column-gap: 332px;">
+
+          <%for(let product of products) {%>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="card" style="height:290px;width: 590px;margin-bottom: 32px;background-color: #fefae0;">
+                <div id="foo"></div>
+                <div class="card-header" style="color: #31572c;font-size: 32px;">
+                  <%= product.name%>
+                </div>
+                <div class="card-body">
+                  <blockquote class="blockquote mb-0">
+                    <p>
+                      <%= product.summ%>
+                    </p>
+                    <footer class="blockquote-footer" style="color: #31572c;font-style: italic;margin-top: 12px;">
+                      <%= product.author%> <cite title="Source Title">.</cite>
+                    </footer>
+                    <a href="/products/<%=product._id%>" class="btn btn-outline" style="color: #31572c">Read More</a>
+                    <a class="btn btn-outline" onclick="myFunction()" style="color: #31572c;">Add bookmark</a>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+            <%}%>
+
+        </div>
+        </div>
+        <%- include("../partial/footer.ejs") %>
